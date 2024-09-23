@@ -7,7 +7,6 @@ type User struct {
 }
 
 type Book struct {
-	BookID int    `json:"book_id"`
 	Title  string `json:"title"`
 	Author string `json:"author"`
 }
@@ -15,4 +14,9 @@ type Book struct {
 type Author struct {
 	AuthorID int    `json:"author_id"`
 	Name     string `json:"author_name"`
+}
+
+type TakeBookRequest struct {
+	UserID int `json:"user_id"`
+	BookID int `json:"book_id"`
 }

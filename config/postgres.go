@@ -19,6 +19,7 @@ func NewConfig() PgConfig {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+
 	return PgConfig{
 		Host:     os.Getenv("DB_HOST"),
 		Port:     os.Getenv("DB_PORT"),
