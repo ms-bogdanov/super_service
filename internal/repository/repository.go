@@ -127,8 +127,8 @@ func (us UserStorage) AddAuthor(v string) error {
 	return nil
 }
 
-func (us UserStorage) AddBook(v string) error {
-	_, err := us.db.ExecContext(context.Background(), queryAddBook, v)
+func (us UserStorage) AddBook(title string, author int) error {
+	_, err := us.db.ExecContext(context.Background(), queryAddBook, title, author)
 	if err != nil {
 		return err
 	}

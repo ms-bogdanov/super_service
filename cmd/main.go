@@ -17,6 +17,8 @@ func main() {
 	svc := service.NewService(repo)
 	ctl := controller.NewController(svc)
 
+	svc.InitProject()
+
 	r := chi.NewRouter()
 	r.Post("/take", ctl.TakeBook)
 	r.Post("/return", ctl.ReturnBooks)
